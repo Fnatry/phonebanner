@@ -63,7 +63,17 @@
 					width: 15rem;
 					background:grew;
 				}
-				
+			span{
+				border-radius:50%;
+				height:0.4rem;
+				width:0.4rem;
+				background:red;
+				}
+			.dian{
+				position:absolute;
+				bottom:0.5rem;
+				left:45%;
+			}
 		</style>
 	</head>
 	<body>
@@ -74,7 +84,18 @@
 				<li class="li3"><img src="imag/background3.jpg" alt="" /></li>
 				<li class="li4"><img src="imag/background4.jpg" alt="" /></li>
 				<li class="li5"><img src="imag/background5.jpg" alt="" /></li>
+				<li class="li1"><img src="imag/background1.jpg" alt="" /></li>
+				<li class="li2"><img src="imag/background2.jpg" alt="" /></li>
+				<li class="li3"><img src="imag/background3.jpg" alt="" /></li>
+				<li class="li4"><img src="imag/background4.jpg" alt="" /></li>
+				<li class="li5"><img src="imag/background5.jpg" alt="" /></li>
 			</ul>
+			<div class="dian">
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
 		</section>
 		
 		
@@ -115,7 +136,7 @@
 				list.style.left = num*w + "px";
 				list.style.transition ="2s"
 			})
-			
+			var span = document.querySelector("span")
 		</script>
 	</body>
 </html>
