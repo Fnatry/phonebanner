@@ -3,7 +3,6 @@
 	<head>
 		<meta charset="UTF-8">
 	
-				<!--viewport 视口-->
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title></title>
 		<script>
@@ -92,12 +91,10 @@
 				disX = 0,/*获取坐标*/
 				listL = 0,/*获取左边距离*/
 				w = box.clientWidth;
-//				console.log(w)
 				
 			list.addEventListener("touchstart",function(e){
 				/*获取触摸时的坐标*/
 				disX = e.changedTouches[0].pageX;
-//				console.log(e.changedTouches)
 				listL = this.offsetLeft;
 				/*end事件之后start事件中要清transition，要不会抖动*/
 				list.style.transition ="none"
@@ -106,8 +103,6 @@
 			list.addEventListener("touchmove",function(e){
 				/*获取移动时的坐标*/
 				var divX = e.changedTouches[0].pageX;
-//				console.log(divX)	
-//				console.log(divX - disX)
 				
 				list.style.left = (divX - disX)+listL + "px";
 				
@@ -117,7 +112,6 @@
 				/*以0.5 为基准 大于0.5向上取整 小于0.5 向下 */
 				var num = Math.round(divL/w);
 				/*这是个 负数*/
-				console.log(num)
 				list.style.left = num*w + "px";
 				list.style.transition ="2s"
 			})
